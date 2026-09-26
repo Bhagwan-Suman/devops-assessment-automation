@@ -1,0 +1,14 @@
+# terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+plan.txt
+crash.log
+backend_override.tf
+
+# local env + backups
+.env
+backups/*
+!backups/.gitkeep
