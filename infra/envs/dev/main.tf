@@ -56,3 +56,7 @@ module "ecs" {
   db_name                 = var.db_name
   db_secret_arn           = module.rds.master_user_secret_arn
 }
+module "iam" {
+  source      = "../modules/iam"
+  environment = "dev"
+}
