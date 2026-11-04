@@ -34,6 +34,11 @@ module "rds" {
   apply_immediately            = var.environment != "prod"
 }
 
+#module "iam" {
+  #source      = "../../modules/iam"
+  #environment = "dev"
+  #}
+
 module "ecs" {
   source = "../../modules/ecs"
 
@@ -56,7 +61,4 @@ module "ecs" {
   db_name                 = var.db_name
   db_secret_arn           = module.rds.master_user_secret_arn
 }
-module "iam" {
-  source      = "../../modules/iam"
-  environment = "dev"
-}
+
